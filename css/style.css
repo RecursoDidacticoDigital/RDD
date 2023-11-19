@@ -1,0 +1,299 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 450px;
+  min-width: none;
+  width: 100%;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #6c1d45;
+  color: white;
+  padding: 15px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-highlight{
+  color: #6c1d45;
+  font-weight: bold;
+}
+
+.text-underline{
+  color: #6c1d45;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.f-size-l {
+  font-size: 1.4rem;
+}
+
+.f-size-xs {
+  font-size: x-small;
+}
+
+.color-ipn {
+  color: #6c1d45;
+}
+
+.texto-limitado {
+  max-width: 75%;
+  /* 64 caracteres en una fuente de 16px */
+  line-height: 1.5;
+  /* Ajusta el valor para que cada línea tenga 64 caracteres aproximadamente */
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/*para listas*/
+ul {
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.non-vineta {
+  list-style-type: none;
+}
+
+.curr-link {
+  color: black;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+
+  .row.content {
+    height: auto;
+  }
+}
+
+/*para dos columnas*/
+.contenedor {
+  max-width: 1200px;
+  width: 95%;
+  margin: auto auto;
+}
+
+.contenedor-glosario {
+  max-width: 800px;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-fuentes {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.tres-columnas .columna:first-child,
+.tres-columnas .columna:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  /*justify-content: center;*/
+}
+
+.tres-columnas .columna:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*
+  .dos-columnas .columna-fija {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    transform: translateY(-50%);
+  }*/
+/*
+  .columna a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  */
+.tres-columnas .columna,
+.dos-columnas .columna {
+  /*margin: 1rem 1rem;*/
+  margin-top: 1rem;
+}
+
+.center-div{
+  display: flex;
+  align-items:center;
+}
+
+@media (min-width: 786px) {
+  .dos-columnas {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 2.5rem;
+  }
+
+  .tres-columnas {
+    max-width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 1rem;
+    margin: auto 1.5rem;
+  }
+}
+
+/*Barra de progreso*/
+#myProgress {
+  width: 100%;
+  background-color: #ddd
+}
+
+#progress1 {
+  width: 0%;
+  height: 30px;
+  background-color: #28E030
+}
+
+#progress2 {
+  width: 0%;
+  height: 30px;
+  background-color: #1ACCEC
+}
+
+#progress3 {
+  width: 0%;
+  height: 30px;
+  background-color: #0023FF
+}
+
+#progress4 {
+  width: 0%;
+  height: 30px;
+  background-color: #6C00FF
+}
+
+.main-footer{
+  text-align: center;
+}
+.footer__t1{
+  font-size: 2rem;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "aside content";
+  grid-template-columns: 50% 50%;
+}
+
+.donate-section{
+  margin-bottom: 2rem;
+}
+
+.columns__aside{
+  text-align: center;
+  grid-area: aside;
+  padding-right: 5em;
+
+}
+
+.column__content{
+  grid-area: content;
+  padding-left: 5em;
+}
+
+.margin-vertical-large{
+  display: flex;
+}
+
+.social-icons{
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.svg-inline--fa{
+  color: #f1f1f1;
+  opacity: 0.5;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+  transition: all 300ms linear;
+}
+
+.svg-inline--fa:hover{
+  opacity: 1;
+  background-color: #0A58CA;
+}
+
+.marketing{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.p-5{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.img-circle{
+  border-radius: 50%;
+}
+
+.featurette{
+  display: row;
+  flex-direction: row;
+}
