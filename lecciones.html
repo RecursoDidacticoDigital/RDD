@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <!--<h1 class="text-center">Unidad 1: La empresa y su entorno</h1>-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="d-none d-sm-block" href="#">
+            <img src="/img/Logo_IPN.png" height="120">
+          </a>
+          <a href="#" class="navbar-brand d-none d-md-block d-xl-block">
+            Unidad 1: La empresa y su entorno
+          </a>
+          <button 
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-haspopup="true" 
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">Conócenos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" 
+              href="#" 
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true" 
+              aria-expanded="false">
+              Unidad I
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a href="lecciones.html" class="dropdown-item">Lección I</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="lecciones.html" class="dropdown-item">Lección II</a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="lecciones.html" class="dropdown-item">Lección III</a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a href="lecciones.html" class="dropdown-item">Lección IV</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bibliografia.html">Fuentes de consulta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="glosario.html">Glosario</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#">
+          <img src="/img/escudoESCOM.png" width="120">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="contenedor dos-columnas">
+    <article class="columna">
+      <h2 class="text-center">Lecciones</h2>
+      <p><a class="" href="lecciones.html">Lección I</a></p>
+      <p><a class="" href="lecciones.html">Lección II</a></p>
+      <p><a class="" href="lecciones.html">Lección III</a></p>
+      <p><a class="" href="lecciones.html">Lección IV</a></p>
+    </article>
+    
+    <article class="columna">
+      <h2 class="text-center">Progreso</h2>
+        <h5>Lección I</h5>
+        <div id="myProgress">
+            <div id="progress1"></div>
+        </div>
+        <br>
+        <button id="moverButton1">Click para progresar la barra</button>
+        <button id="resetButton1">Click para resetear la barra</button>
+
+        <h5>Lección II</h5>
+        <div id="myProgress">
+            <div id="progress2"></div>
+        </div>
+        <br>
+        <button id="moverButton2">Click para progresar la barra</button>
+        <button id="resetButton2">Click para resetear la barra</button>
+
+        <h5>Lección III</h5>
+        <div id="myProgress">
+            <div id="progress3"></div>
+        </div>
+        <br>
+        <button id="moverButton3">Click para progresar la barra</button>
+        <button id="resetButton3">Click para resetear la barra</button>
+
+        <h5>Lección IV</h5>
+        <div id="myProgress">
+            <div id="progress4"></div>
+        </div>
+        <br>
+        <button id="moverButton4">Click para progresar la barra</button>
+        <button id="resetButton4">Click para resetear la barra</button>
+    </article>
+</div>
+<script src="js/progressB.js"></script>
+<footer data-v-ba5f45b8="" class="main-footer">
+  <br/>
+  <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title"
+  rel="dct:type">Unidad temática 1- Aspectos básicos de la gestión empresarial</span> por 
+  <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.comunidad.escom.ipn.mx/tanibethpm/RDD/"
+  property="cc:attributionName" rel="cc:attributionURL">Tanibet Pérez de los Santos Mondragón, Fanny Sosa Adán 
+</a>se distribuye bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative
+  Commons Atribución-NoComercial 4.0 Internacional</a><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+    <img alt="Licencia Creative Commons"
+    style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+  </a>
+</footer>
+
+  </body>
+</html>
