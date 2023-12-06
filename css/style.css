@@ -464,7 +464,6 @@ li {
 .tres-columnas .columna:nth-child(2) {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 /*
