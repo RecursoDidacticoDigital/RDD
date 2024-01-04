@@ -156,8 +156,9 @@
                 <ol class="text-justify texto-limitado f-size-l">
                     <!-- Pregunta 1 -->
                     <li>
-                        ¿Cuál es el objetivo fundamental de la administración en gestión empresarial?
-                        <br>
+                        <div class="question">
+                            ¿Cuál es el objetivo fundamental de la administración en gestión empresarial?
+                        </div>
                         <label>
                             <input type="radio" name="q1" value="a"> a. Maximizar el desperdicio
                         </label><br>
@@ -177,8 +178,9 @@
                     </li>
                     <!-- Pregunta 2 -->
                     <li>
-                        ¿Qué implica la función de "organización" en la administración?
-                        <br>
+                        <div class="question">
+                            ¿Qué implica la función de "organización" en la administración?
+                        </div>
                         <label>
                             <input type="radio" name="q2" value="a"> a. Establecer metas y objetivos organizacionales
                         </label><br>
@@ -197,8 +199,9 @@
                     </li>
                     <!-- Pregunta 3 -->
                     <li>
-                        ¿Cuál de las siguientes áreas funcionales no está involucrada en la administración en gestión empresarial?
-                        <br>
+                        <div class="question">
+                            ¿Cuál de las siguientes áreas funcionales no está involucrada en la administración en gestión empresarial?
+                        </div>
                         <label>
                             <input type="radio" name="q3" value="a"> a. Gestión de recursos humanos
                         </label><br>
@@ -218,8 +221,9 @@
                     </li>
                     <!-- Pregunta 4 -->
                     <li>
-                        ¿Qué función de la administración implica tomar decisiones sobre qué hacer, cómo hacerlo y cuándo hacerlo?
-                        <br>
+                        <div class="question">
+                            ¿Qué función de la administración implica tomar decisiones sobre qué hacer, cómo hacerlo y cuándo hacerlo?
+                        </div>
                         <label>
                             <input type="radio" name="q4" value="a"> a. Planificación
                         </label><br>
@@ -238,8 +242,9 @@
                     </li>
                     <!-- Pregunta 5 -->
                     <li>
-                        ¿Cuál es uno de los objetivos específicos de la administración?
-                        <br>
+                        <div class="question">
+                            ¿Cuál es uno de los objetivos específicos de la administración?
+                        </div>
                         <label>
                             <input type="radio" name="q5" value="a"> a. Minimizar la eficiencia
                         </label><br>
@@ -258,8 +263,9 @@
                     </li>
                     <!-- Pregunta 6 -->
                     <li>
-                        ¿Qué busca la administración al fomentar la innovación y la adaptabilidad?
-                        <br>
+                        <div class="question">
+                            ¿Qué busca la administración al fomentar la innovación y la adaptabilidad?
+                        </div>
                         <label>
                             <input type="radio" name="q6" value="a"> a. Maximizar la eficiencia
                         </label><br>
@@ -278,8 +284,9 @@
                     </li>
                     <!-- Pregunta 7 -->
                     <li>
-                        ¿Cuál de las siguientes opciones describe mejor la función de "control" en la administración?
-                        <br>
+                        <div class="question">
+                            ¿Cuál de las siguientes opciones describe mejor la función de "control" en la administración?
+                        </div>
                         <label>
                             <input type="radio" name="q7" value="a"> a. Monitorear y evaluar el desempeño de la organización
                         </label><br>
@@ -298,8 +305,9 @@
                     </li>
                     <!-- Pregunta 8 -->
                     <li>
-                        ¿Qué significa "eficiencia" en el contexto de la administración en gestión empresarial?
-                        <br>
+                        <div class="question">
+                            ¿Qué significa "eficiencia" en el contexto de la administración en gestión empresarial?
+                        </div>
                         <label>
                             <input type="radio" name="q8" value="a"> a. Hacer las cosas de manera correcta
                         </label><br>
@@ -326,7 +334,6 @@
             <script>
                 document.getElementById('quizForm').addEventListener('submit', function (e) {
                     e.preventDefault();
-
                     // Definir las respuestas correctas
                     const respuestasCorrectas = {
                         'q1': 'c',
@@ -337,27 +344,34 @@
                         'q6': 'd',
                         'q7': 'a',
                         'q8': 'c',
-                        // Agrega más respuestas correctas aquí
                     };
 
                     const preguntas = document.querySelectorAll('li');
                     let puntuacion = 0;
 
                     preguntas.forEach(pregunta => {
-                const respuestaSeleccionada = pregunta.querySelector('input[type="radio"]:checked');
-                
-                if (respuestaSeleccionada) {
-                    const preguntaID = respuestaSeleccionada.name;
-                    const respuesta = respuestaSeleccionada.value;
+                        const respuestaSeleccionada = pregunta.querySelector('input[type="radio"]:checked');
+                        const respuestasNoSeleccionada = pregunta.querySelectorAll('label');
+                        const preguntaEtiqueta = pregunta.querySelector('.question');
 
-                    if (respuesta === respuestasCorrectas[preguntaID]) {
-                        puntuacion++;
-                        pregunta.style.color = 'green'; // Respuesta correcta en verde
-                    } else {
-                        pregunta.style.color = 'red'; // Respuesta incorrecta en rojo
-                    }
-                }
-            });
+                        respuestasNoSeleccionada.forEach( radio => {
+                            radio.style.color = 'black';
+                        });
+                        
+                        if (respuestaSeleccionada) {
+                            const preguntaID = respuestaSeleccionada.name;
+                            const respuesta = respuestaSeleccionada.value;
+                            
+                            if (respuesta === respuestasCorrectas[preguntaID]) {
+                                puntuacion++;
+                                respuestaSeleccionada.parentElement.style.color = 'green'; // Respuesta correcta en verde
+                                preguntaEtiqueta.style.color = 'green'; // Respuesta correcta en verde
+                            } else {
+                                respuestaSeleccionada.parentElement.style.color = 'red'; // Respuesta incorrecta en rojo
+                                preguntaEtiqueta.style.color = 'red'; // Respuesta incorrecta en rojo
+                            }
+                        }
+                    });
 
                     const resultDiv = document.getElementById('result');
                     resultDiv.innerHTML = `<h2>Puntuación: ${puntuacion} de 8</h2>`;
@@ -377,7 +391,6 @@
             </ul>
         </div>
     </div>
-    <script src="js/progressB.js"></script>
     <footer data-v-ba5f45b8="" class="main-footer">
         <br/>
         <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title"
