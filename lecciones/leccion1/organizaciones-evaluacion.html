@@ -357,14 +357,14 @@
           e.preventDefault();
           const questions = document.querySelectorAll('.question');
           const respuestasCorrectas = {
-            'a. Sociedad Cooperativa': '6',
-            'b. Sociedad en Comandita por Acciones': '8',
+            'a. Sociedad Cooperativa': '5',
+            'b. Sociedad en Comandita por Acciones': '4',
             'c. Sociedad Civil': '3',
-            'd. Sociedad Anónima': '2',
-            'e. Sociedad de Acciones Simplificada': '1',
-            'f. Sociedad de Responsabilidad Limitada': '7',
-            'g. Sociedad en Nombre Colectivo': '5',
-            'h. Sociedad en Comandita Simple': '4',
+            'd. Sociedad Anónima': '8',
+            'e. Sociedad de Acciones Simplificada': '7',
+            'f. Sociedad de Responsabilidad Limitada': '1',
+            'g. Sociedad en Nombre Colectivo': '6',
+            'h. Sociedad en Comandita Simple': '2',
             // Agrega más relaciones correctas según sea necesario
           };
           let puntuacion = 0;
@@ -372,9 +372,8 @@
             const conceptSelect = question.querySelector('.concept-select');
             const definitionSelect = question.querySelector('.definition-select');
             const answerSelect= question.querySelector('.answer-select');
-
             const concept = conceptSelect.textContent.trim(); // Obtener el texto del concepto
-            const selectedOption = definitionSelect.value; // Obtener el valor seleccionado en el select
+            const selectedOption = answerSelect.value; // Obtener el valor seleccionado en el select
 
             if (respuestasCorrectas[concept] === selectedOption) {
               // La respuesta es correcta, puedes agregar estilos CSS u otras acciones aquí si lo deseas
